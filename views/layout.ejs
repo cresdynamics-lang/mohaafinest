@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <meta name="description" content="<%= description %>">
+    <meta property="og:title" content="<%= title %>">
+    <meta property="og:description" content="<%= description %>">
+    <meta property="og:image" content="/images/logo.jpeg">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="icon" href="/images/logo.jpeg" type="image/jpeg">
+    <!-- WhatsApp Business API ready -->
+    <meta property="business:contact_data:street_address" content="Moyale Mall, Eastleigh">
+    <meta property="business:contact_data:locality" content="Nairobi">
+    <meta property="business:contact_data:country_name" content="Kenya">
+    <meta property="business:contact_data:phone_number" content="+254700000000">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="/images/logo.jpeg" alt="Mohaa Finest Curtains Logo" class="logo">
+                <span class="brand-name">Mohaa Finest Curtains</span>
+            </div>
+            <div class="nav-menu">
+                <a href="/" class="nav-link <%= currentPage === 'home' ? 'active' : '' %>">Home</a>
+                <a href="/services" class="nav-link <%= currentPage === 'services' ? 'active' : '' %>">Services</a>
+                <a href="/gallery" class="nav-link <%= currentPage === 'gallery' ? 'active' : '' %>">Gallery</a>
+                <a href="/how-it-works" class="nav-link <%= currentPage === 'how-it-works' ? 'active' : '' %>">How It Works</a>
+                <a href="/about" class="nav-link <%= currentPage === 'about' ? 'active' : '' %>">About</a>
+                <a href="/contact" class="nav-link <%= currentPage === 'contact' ? 'active' : '' %>">Contact</a>
+            </div>
+            <div class="nav-cta">
+                <a href="https://wa.me/254700000000?text=Hi%20Mohaa%20Finest%20Curtains,%20I%20need%20curtains%20for%20my%20home/office" class="btn btn-primary" target="_blank">
+                    WhatsApp Us
+                </a>
+            </div>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <%- body %>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Mohaa Finest Curtains</h3>
+                    <p><strong>Think Curtains. Think Mohaa.</strong></p>
+                    <p>Eastleigh's trusted curtain experts — from measurement to installation.</p>
+                    <p>🏢 Moyale Mall, Eastleigh, Nairobi</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="/services#curtain-sales">Curtain Sales</a></li>
+                        <li><a href="/services#free-measurement">Free Measurement</a></li>
+                        <li><a href="/services#installation">Professional Installation</a></li>
+                        <li><a href="/services#custom">Custom Curtains</a></li>
+                        <li><a href="/services#commercial">Office & Hotel Curtains</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>📞 <strong>Phone:</strong> +254 700 000 000</p>
+                    <p>💬 <strong>WhatsApp:</strong> +254 700 000 000</p>
+                    <p>🕒 <strong>Business Hours:</strong></p>
+                    <p>Mon-Sat: 8:00 AM - 8:00 PM</p>
+                    <p>Sunday: 10:00 AM - 6:00 PM</p>
+                    <a href="https://wa.me/254700000000" class="btn btn-primary" target="_blank" style="margin-top: 10px;">WhatsApp Us</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="/gallery">View Gallery</a></li>
+                        <li><a href="/how-it-works">How It Works</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/contact">Visit Us</a></li>
+                    </ul>
+                    <p style="margin-top: 15px;">
+                        <a href="https://maps.google.com/?q=Moyale+Mall+Eastleigh+Nairobi" target="_blank" style="color: #E3A62B;">
+                            📍 View on Google Maps
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <%= new Date().getFullYear() %> Mohaa Finest Curtains. All rights reserved. | Built with ❤️ for Eastleigh</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky WhatsApp Button -->
+    <a href="https://wa.me/254700000000?text=Hi%20Mohaa%20Finest%20Curtains,%20I%20need%20help%20with%20curtains" class="whatsapp-sticky" target="_blank" aria-label="Contact us on WhatsApp">
+        💬 WhatsApp
+    </a>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>
