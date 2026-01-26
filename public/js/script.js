@@ -72,6 +72,43 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // WhatsApp Popup Functionality
+    const whatsappPopup = document.getElementById('whatsapp-popup');
+    const popupClose = document.querySelector('.popup-close');
+    let popupShown = false;
+
+    // Show popup after 5 seconds
+    setTimeout(function() {
+        if (!popupShown && !sessionStorage.getItem('whatsappPopupShown')) {
+            whatsappPopup.style.display = 'block';
+            popupShown = true;
+            sessionStorage.setItem('whatsappPopupShown', 'true');
+        }
+    }, 5000); // 5 seconds
+
+    // Close popup when clicking the X
+    if (popupClose) {
+        popupClose.addEventListener('click', function() {
+            whatsappPopup.style.display = 'none';
+        });
+    }
+
+    // Close popup when clicking outside the content
+    if (whatsappPopup) {
+        whatsappPopup.addEventListener('click', function(e) {
+            if (e.target === whatsappPopup) {
+                whatsappPopup.style.display = 'none';
+            }
+        });
+    }
+
+    // Close popup when clicking WhatsApp button (to avoid double popup)
+    document.querySelectorAll('.whatsapp-popup-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            whatsappPopup.style.display = 'none';
+        });
+    });
+
     // Form validation for any forms (if added later)
     function validatePhoneNumber(phone) {
         const phoneRegex = /^(\+254|254|0)[17]\d{8}$/;

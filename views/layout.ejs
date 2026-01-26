@@ -8,6 +8,7 @@
     <meta property="og:title" content="<%= title %>">
     <meta property="og:description" content="<%= description %>">
     <meta property="og:image" content="/images/logo.jpeg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="icon" href="/images/logo.jpeg" type="image/jpeg">
     <!-- WhatsApp Business API ready -->
@@ -31,11 +32,6 @@
                 <a href="/how-it-works" class="nav-link <%= currentPage === 'how-it-works' ? 'active' : '' %>">How It Works</a>
                 <a href="/about" class="nav-link <%= currentPage === 'about' ? 'active' : '' %>">About</a>
                 <a href="/contact" class="nav-link <%= currentPage === 'contact' ? 'active' : '' %>">Contact</a>
-            </div>
-            <div class="nav-cta">
-                <a href="https://wa.me/<%= phoneIntl %>?text=Hi%20Mohaa%20Finest%20Curtains,%20I%20need%20curtains%20for%20my%20home/office" class="btn btn-primary" target="_blank">
-                    WhatsApp Us
-                </a>
             </div>
             <div class="mobile-menu-toggle">
                 <span></span>
@@ -77,7 +73,6 @@
                     <p>🕒 <strong>Business Hours:</strong></p>
                     <p>Mon-Sat: 8:00 AM - 8:00 PM</p>
                     <p>Sunday: 10:00 AM - 6:00 PM</p>
-                    <a href="https://wa.me/<%= phoneIntl %>" class="btn btn-primary" target="_blank" style="margin-top: 10px;">WhatsApp Us</a>
                 </div>
                 <div class="footer-section">
                     <h3>Quick Links</h3>
@@ -95,15 +90,27 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; <%= new Date().getFullYear() %> Mohaa Finest Curtains. All rights reserved. | Built with ❤️ for Eastleigh</p>
+                <p>&copy; <%= new Date().getFullYear() %> Mohaa Finest Curtains. All rights reserved. | Designed by <a href="https://www.cresdynamics.com" target="_blank" style="text-decoration: underline;">Cres Dymics</a></p>
             </div>
         </div>
     </footer>
 
-    <!-- Sticky WhatsApp Button -->
-    <a href="https://wa.me/<%= phoneIntl %>?text=Hi%20Mohaa%20Finest%20Curtains,%20I%20need%20help%20with%20curtains" class="whatsapp-sticky" target="_blank" aria-label="Contact us on WhatsApp">
-        💬 WhatsApp
-    </a>
+    <!-- WhatsApp Popup -->
+    <div id="whatsapp-popup" class="whatsapp-popup">
+        <div class="whatsapp-popup-content">
+            <div class="whatsapp-popup-header">
+                <img src="/images/logo.jpeg" alt="Mohaa Finest Curtains" class="popup-logo">
+                <span class="popup-close">&times;</span>
+            </div>
+            <div class="whatsapp-popup-body">
+                <div class="whatsapp-message">WhatsApp Us</div>
+                <a href="https://wa.me/<%= phoneIntl %>?text=Hi%20Mohaa%20Finest%20Curtains,%20I%20need%20help%20with%20curtains" class="btn btn-primary whatsapp-popup-btn" target="_blank">
+                    <img src="/images/logo.jpeg" alt="WhatsApp" class="btn-logo">
+                    Start Chat
+                </a>
+            </div>
+        </div>
+    </div>
 
     <script src="/js/script.js"></script>
 </body>
