@@ -14,7 +14,7 @@
     <meta property="business:contact_data:street_address" content="Moyale Mall, Eastleigh">
     <meta property="business:contact_data:locality" content="Nairobi">
     <meta property="business:contact_data:country_name" content="Kenya">
-    <meta property="business:contact_data:phone_number" content="+254700000000">
+    <meta property="business:contact_data:phone_number" content="<%= phoneIntl %>">
 </head>
 <body>
     <!-- Navigation -->
@@ -33,7 +33,7 @@
                 <a href="/contact" class="nav-link <%= currentPage === 'contact' ? 'active' : '' %>">Contact</a>
             </div>
             <div class="nav-cta">
-                <a href="https://wa.me/254700000000?text=Hi%20Mohaa%20Finest%20Curtains,%20I%20need%20curtains%20for%20my%20home/office" class="btn btn-primary" target="_blank">
+                <a href="https://wa.me/<%= phoneIntl %>?text=Hi%20Mohaa%20Finest%20Curtains,%20I%20need%20curtains%20for%20my%20home/office" class="btn btn-primary" target="_blank">
                     WhatsApp Us
                 </a>
             </div>
@@ -57,7 +57,7 @@
                 <div class="footer-section">
                     <h3>Mohaa Finest Curtains</h3>
                     <p><strong>Think Curtains. Think Mohaa.</strong></p>
-                    <p>Eastleigh's trusted curtain experts — from measurement to installation.</p>
+                    <p>Kenya's trusted curtain experts — from measurement to installation nationwide.</p>
                     <p>🏢 Moyale Mall, Eastleigh, Nairobi</p>
                 </div>
                 <div class="footer-section">
@@ -72,12 +72,12 @@
                 </div>
                 <div class="footer-section">
                     <h3>Contact</h3>
-                    <p>📞 <strong>Phone:</strong> +254 700 000 000</p>
-                    <p>💬 <strong>WhatsApp:</strong> +254 700 000 000</p>
+                    <p>📞 <strong>Phone:</strong> <%= phone %></p>
+                    <p>💬 <strong>WhatsApp:</strong> <%= phone %></p>
                     <p>🕒 <strong>Business Hours:</strong></p>
                     <p>Mon-Sat: 8:00 AM - 8:00 PM</p>
                     <p>Sunday: 10:00 AM - 6:00 PM</p>
-                    <a href="https://wa.me/254700000000" class="btn btn-primary" target="_blank" style="margin-top: 10px;">WhatsApp Us</a>
+                    <a href="https://wa.me/<%= phoneIntl %>" class="btn btn-primary" target="_blank" style="margin-top: 10px;">WhatsApp Us</a>
                 </div>
                 <div class="footer-section">
                     <h3>Quick Links</h3>
@@ -101,7 +101,7 @@
     </footer>
 
     <!-- Sticky WhatsApp Button -->
-    <a href="https://wa.me/254700000000?text=Hi%20Mohaa%20Finest%20Curtains,%20I%20need%20help%20with%20curtains" class="whatsapp-sticky" target="_blank" aria-label="Contact us on WhatsApp">
+    <a href="https://wa.me/<%= phoneIntl %>?text=Hi%20Mohaa%20Finest%20Curtains,%20I%20need%20help%20with%20curtains" class="whatsapp-sticky" target="_blank" aria-label="Contact us on WhatsApp">
         💬 WhatsApp
     </a>
 
