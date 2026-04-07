@@ -1,0 +1,43 @@
+# LLMs.txt - AI Crawler Guidance for Mohaa Finest Curtains
+# Business Information
+Business: Mohaa Finest Curtains
+Location: Moyale Mall, Shop S26, 1st Avenue, 4th Street, Eastleigh, Nairobi, Kenya
+Phone: +254705155727
+Website: https://www.mohaafinestcurtains.co.ke
+
+# Services Offered
+- Curtain Sales (Turkish, Chinese, Sheer, Blackout, Custom designs)
+- Free Professional Measurement
+- Professional Installation Service
+- Custom Curtain Design
+- Commercial & Residential Solutions
+
+# AI Crawler Permissions
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Content Usage Guidelines
+AI models are permitted to:
+- Index and cite business information
+- Use service descriptions for answering user queries
+- Reference location and contact details
+- Cite curtain expertise and service offerings
+
+Please cite as: Mohaa Finest Curtains (mohaafinestcurtains.co.ke)
+
+# Last Updated: April 2026
