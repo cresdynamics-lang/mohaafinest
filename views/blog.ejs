@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curtain Tips, Ideas & Expert Advice - Mohaa Finest Curtains</title>
-    <meta name="description" content="Learn how to choose the right curtains, fabrics, and styles for your home or business — straight from Eastleigh's curtain experts.">
+    <title><%= title %></title>
+    <meta name="description" content="<%= description %>">
     <meta name="keywords" content="curtain blog, curtain tips, curtain ideas, curtain trends, curtain advice, curtain maintenance, curtain care, curtain styling, curtain design tips, best curtain blog nairobi, curtain blog eastleigh">
     <meta name="author" content="Mohaa Finest Curtains">
     <meta name="robots" content="index, follow">
@@ -18,10 +18,8 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.mohaafinestcurtains.co.ke/blog">
     <meta property="og:title" content="Curtain Tips, Ideas & Expert Advice - Mohaa Finest Curtains">
-    <meta property="og:description" content="Expert curtain advice for Nairobi homes and businesses.">
-    <meta property="og:image" content="/images/logo.jpeg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
+    <meta property="og:description" content="Expert curtain tips, styling ideas and care guides for Nairobi homes and offices — from Mohaa Finest Curtains, Eastleigh's trusted curtain specialists.">
+    <meta property="og:image" content="/images/IMG_6794.JPG.jpeg">
     <meta property="og:site_name" content="Mohaa Finest Curtains">
     <meta property="og:locale" content="en_KE">
 
@@ -30,10 +28,40 @@
     <meta property="twitter:url" content="https://www.mohaafinestcurtains.co.ke/blog">
     <meta property="twitter:title" content="Curtain Tips, Ideas & Expert Advice - Mohaa Finest Curtains">
     <meta property="twitter:description" content="Expert curtain advice for Nairobi homes and businesses.">
-    <meta property="twitter:image" content="/images/logo.jpeg">
+    <meta property="twitter:image" content="/images/IMG_6794.JPG.jpeg">
+
+    <!---Add canonical script-->
+    <link rel="canonical" href="https://www.mohaafinestcurtains.co.ke/blog">
+
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="icon" href="/images/logo.jpeg" type="image/jpeg">
     <link rel="canonical" href="https://www.mohaafinestcurtains.co.ke/blog">
+
+    <!-----Add json_ld script-->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "ItemList"],
+  "name": "Mohaa Finest Curtains",
+  "url": "https://www.mohaafinestcurtains.co.ke/blog",
+  "telephone": "<%= phoneIntl %>",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Moyale Mall, Shop S26, 1st Avenue, 4th Street",
+    "addressLocality": "Eastleigh",
+    "addressRegion": "Nairobi",
+    "addressCountry": "KE"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "08:00", "closes": "20:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Sunday"], "opens": "10:00", "closes": "18:00" }
+  ],
+  "sameAs": [
+    "https://www.facebook.com/share/1AYCXkkWvB/",
+    "https://www.instagram.com/mohaa_finest_curtains"
+  ]
+}
+</script>
 </head>
 <body>
     <!-- Navigation -->
@@ -288,6 +316,31 @@
         </section>
     </main>
 
+<!-- Blog Footer CTA -->
+    <section class="blog-footer-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Think Curtains. Think Mohaa.</h2>
+                <p>Get expert curtain advice for your home or business anywhere in Kenya.</p>
+                <div class="cta-buttons">
+                    <a href="https://wa.me/<%= phoneIntl %>?text=Hi%20Mohaa%20Finest%20Curtains,%20I%20read%20your%20blog%20and%20need%20curtain%20help" class="btn btn-primary" target="_blank">
+                        WhatsApp Us
+                    </a>
+                    <a href="https://wa.me/<%= phoneIntl %>?text=I%20want%20to%20book%20free%20measurement%20after%20reading%20your%20tips" class="btn btn-secondary" target="_blank">
+                        Book Free Measurement
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sticky WhatsApp Button -->
+    <a href="https://wa.me/<%= phoneIntl %>?text=Hi%20Mohaa%20Finest%20Curtains,%20I%20need%20curtain%20advice" class="whatsapp-sticky" target="_blank" aria-label="Contact us on WhatsApp">
+        <img src="/images/logo.jpeg" alt="Mohaa Finest Curtains WhatsApp" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
+    </a>
+        💬 WhatsApp
+    </a>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -343,31 +396,6 @@
             </div>
         </div>
     </footer>
-
-    <!-- Blog Footer CTA -->
-    <section class="blog-footer-cta">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Think Curtains. Think Mohaa.</h2>
-                <p>Get expert curtain advice for your home or business anywhere in Kenya.</p>
-                <div class="cta-buttons">
-                    <a href="https://wa.me/<%= phoneIntl %>?text=Hi%20Mohaa%20Finest%20Curtains,%20I%20read%20your%20blog%20and%20need%20curtain%20help" class="btn btn-primary" target="_blank">
-                        WhatsApp Us
-                    </a>
-                    <a href="https://wa.me/<%= phoneIntl %>?text=I%20want%20to%20book%20free%20measurement%20after%20reading%20your%20tips" class="btn btn-secondary" target="_blank">
-                        Book Free Measurement
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sticky WhatsApp Button -->
-    <a href="https://wa.me/<%= phoneIntl %>?text=Hi%20Mohaa%20Finest%20Curtains,%20I%20need%20curtain%20advice" class="whatsapp-sticky" target="_blank" aria-label="Contact us on WhatsApp">
-        <img src="/images/logo.jpeg" alt="Mohaa Finest Curtains WhatsApp" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
-    </a>
-        💬 WhatsApp
-    </a>
 
     <script src="/js/script.js"></script>
     <script src="/js/blog.js"></script>

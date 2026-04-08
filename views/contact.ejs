@@ -19,9 +19,7 @@
     <meta property="og:url" content="https://www.mohaafinestcurtains.co.ke/contact">
     <meta property="og:title" content="<%= title %>">
     <meta property="og:description" content="<%= description %>">
-    <meta property="og:image" content="/images/logo.jpeg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
+    <meta property="og:image" content="/images/IMG_6794.JPG.jpeg"><!---updated the image instead of showing the logo as the preview when shared via social media platform we show the image-->
     <meta property="og:site_name" content="Mohaa Finest Curtains">
     <meta property="og:locale" content="en_KE">
 
@@ -30,9 +28,37 @@
     <meta property="twitter:url" content="https://www.mohaafinestcurtains.co.ke/contact">
     <meta property="twitter:title" content="<%= title %>">
     <meta property="twitter:description" content="<%= description %>">
-    <meta property="twitter:image" content="/images/logo.jpeg">
+    <meta property="twitter:image" content="/images/IMG_6794.JPG.jpeg"><!---updated the image instead of showing the logo as the preview when shared via social media platform we show the image-->
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="icon" href="/images/logo.jpeg" type="image/jpeg">
+
+    <!----ADD CANONICAL TAG-->
+    <link rel="canonical" href="https://www.mohaafinestcurtains.co.ke/contact">
+    <!-----ADD JSON_LD SCHEMA--->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "ItemList"],
+  "name": "Mohaa Finest Curtains",
+  "url": "https://www.mohaafinestcurtains.co.ke/contact",
+  "telephone": "<%= phoneIntl %>",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Moyale Mall, Shop S26, 1st Avenue, 4th Street",
+    "addressLocality": "Eastleigh",
+    "addressRegion": "Nairobi",
+    "addressCountry": "KE"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "08:00", "closes": "20:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Sunday"], "opens": "10:00", "closes": "18:00" }
+  ],
+  "sameAs": [
+    "https://www.facebook.com/share/1AYCXkkWvB/",
+    "https://www.instagram.com/mohaa_finest_curtains"
+  ]
+}
+</script>
     <link rel="canonical" href="https://www.mohaafinestcurtains.co.ke/contact">
 </head>
 <body>
@@ -279,6 +305,7 @@
     </div>
 </section>
 
+<hr class="section-divider">
 <section class="final-cta">
     <div class="container">
         <h2>Let's Start Your Curtain Project Today</h2>

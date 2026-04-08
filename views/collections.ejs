@@ -4,8 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= title %></title>
+<<<<<<< HEAD
     <meta name="description" content="Explore our premium curtain collections in Nairobi: Turkish, Chinese, sheer, blackout & custom designs. Quality fabrics for homes & offices. Visit our Eastleigh showroom.">
     <meta name="keywords" content="curtain collections, premium curtains, luxury curtains, turkish curtains, chinese curtains, sheer curtains, thermal curtains, velvet curtains, blackout curtains, motorized curtains, custom curtains, linen curtains, voile curtains, jacquard curtains, eyelet curtains, tab top curtains, grommet curtains, pencil pleat curtains, french pleat curtains, austrian curtains, cafe curtains, tier curtains, swag curtains, balloon curtains, hobbled curtains, ripple fold curtains, box pleat curtains, pinch pleat curtains, goblet pleat curtains, cartridge pleat curtains, smocked curtains, cottage curtains, country curtains, modern curtains, traditional curtains, contemporary curtains, minimalist curtains, bohemian curtains, rustic curtains, industrial curtains, scandinavian curtains, mediterranean curtains, tropical curtains, floral curtains, geometric curtains, striped curtains, solid color curtains, best curtains nairobi, luxury curtains eastleigh">
+=======
+    <meta name="description" content="<%= description %>">
+    <meta name="keywords" content="curtains nairobi, blackout curtains kenya, custom curtains eastleigh, premium curtains nairobi, curtain installation kenya">
+>>>>>>> 15da4b5 (SEO optimization across EJS templates (canonical tags, JSON-LD schema, keyword updates); updated server.js routes for Google-friendly titles/descriptions; cleaned invalid paths/dimensions; minor CSS fixes on contact-us and gallery pages)
     <meta name="author" content="Mohaa Finest Curtains">
     <meta name="robots" content="index, follow">
     <meta name="language" content="English">
@@ -19,9 +24,7 @@
     <meta property="og:url" content="https://www.mohaafinestcurtains.co.ke/collections">
     <meta property="og:title" content="<%= title %>">
     <meta property="og:description" content="<%= description %>">
-    <meta property="og:image" content="/images/logo.jpeg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
+   <meta property="og:image" content="/images/IMG_6794.JPG.jpeg">
     <meta property="og:site_name" content="Mohaa Finest Curtains">
     <meta property="og:locale" content="en_KE">
 
@@ -30,7 +33,7 @@
     <meta property="twitter:url" content="https://www.mohaafinestcurtains.co.ke/collections">
     <meta property="twitter:title" content="<%= title %>">
     <meta property="twitter:description" content="<%= description %>">
-    <meta property="twitter:image" content="/images/logo.jpeg">
+    <meta property="twitter:image" content="/images/IMG_6794.JPG.jpeg">
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="icon" href="/images/logo.jpeg" type="image/jpeg">
     <link rel="canonical" href="https://www.mohaafinestcurtains.co.ke/collections">
@@ -39,6 +42,32 @@
     <meta property="business:contact_data:locality" content="Nairobi">
     <meta property="business:contact_data:country_name" content="Kenya">
     <meta property="business:contact_data:phone_number" content="<%= phoneIntl %>">
+    <!-- ADD canonical tag--->
+    <link rel="canonical" href="https://www.mohaafinestcurtains.co.ke/collections">
+    <!-----ADD JSON_LD SCHEMA--><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "ItemList"],
+  "name": "Mohaa Finest Curtains",
+  "url": "https://www.mohaafinestcurtains.co.ke/collections",
+  "telephone": "<%= phoneIntl %>",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Moyale Mall, Shop S26, 1st Avenue, 4th Street",
+    "addressLocality": "Eastleigh",
+    "addressRegion": "Nairobi",
+    "addressCountry": "KE"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "08:00", "closes": "20:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Sunday"], "opens": "10:00", "closes": "18:00" }
+  ],
+  "sameAs": [
+    "https://www.facebook.com/share/1AYCXkkWvB/",
+    "https://www.instagram.com/mohaa_finest_curtains"
+  ]
+}
+</script>
 </head>
 <body>
     <!-- Navigation -->

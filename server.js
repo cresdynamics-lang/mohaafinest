@@ -16,7 +16,7 @@ app.use(express.json());
 app.get('/', (req, res) => {
     res.render('index', {
         title: 'Mohaa Finest Curtains - Eastleigh\'s Trusted Curtain Experts',
-        description: 'Premium curtains, expert measurement & professional installation — serving Eastleigh and Nairobi from Moyale Mall.',
+        description: 'Mohaa Finest Curtains offers premium curtains, free home measurement & professional installation across Nairobi and Kenya. Visit us at Moyale Mall, Eastleigh or WhatsApp today.',
         currentPage: 'home',
         phone: '0705155727',
         phoneIntl: '+254705155727'
@@ -25,8 +25,8 @@ app.get('/', (req, res) => {
 
 app.get('/services', (req, res) => {
     res.render('services', {
-        title: 'Services - Mohaa Finest Curtains',
-        description: 'Curtain sales, free measurement, professional installation, custom curtains, and wholesale services.',
+        title: 'Curtain Services in Nairobi | Free Measurement, Installation & Custom Curtains',
+        description: 'Mohaa Finest Curtains offers curtain sales, free home measurement, professional installation, custom designs and wholesale services across Nairobi and Kenya. Book your free consultation today.',
         currentPage: 'services',
         phone: '0705155727',
         phoneIntl: '+254705155727'
@@ -35,8 +35,8 @@ app.get('/services', (req, res) => {
 
 app.get('/gallery', (req, res) => {
     res.render('gallery', {
-        title: 'Gallery - Mohaa Finest Curtains',
-        description: 'View our work - beautiful curtain installations for homes, offices, and commercial spaces.',
+        title: 'Curtain Installation Gallery | Our Work Across Nairobi & Kenya — Mohaa Finest Curtains',
+        description: 'See real curtain installations by Mohaa Finest Curtains — homes, offices and commercial spaces across Nairobi and Kenya. Browse our work and get inspired for your own space.',
         currentPage: 'gallery',
         phone: '0705155727',
         phoneIntl: '+254705155727'
@@ -45,8 +45,8 @@ app.get('/gallery', (req, res) => {
 
 app.get('/how-it-works', (req, res) => {
     res.render('how-it-works', {
-        title: 'How It Works - Mohaa Finest Curtains',
-        description: 'Simple 4-step process: Contact us, free measurement, choose design, professional installation.',
+        title: 'How It Works | Our 4-Step Curtain Process — Measure, Design, Install in Nairobi,',
+        description: 'See how Mohaa Finest Curtains works — contact us, get a free home measurement, choose your design, and we handle professional installation. Simple, transparent, and hassle-free across Kenya.',
         currentPage: 'how-it-works',
         phone: '0705155727',
         phoneIntl: '+254705155727'
@@ -55,8 +55,8 @@ app.get('/how-it-works', (req, res) => {
 
 app.get('/about', (req, res) => {
     res.render('about', {
-        title: 'About Us - Mohaa Finest Curtains',
-        description: 'Eastleigh\'s trusted curtain experts — from measurement to installation since day one.',
+        title: 'About Mohaa Finest Curtains | Curtain Experts in Eastleigh, Nairobi',//added city and role and business name
+        description: 'Mohaa Finest Curtains is Eastleigh\'s trusted curtain specialist. Premium curtains, free measurement & professional installation across Nairobi and Kenya.',//introduced location, services anddepth, whats shown on google searches results
         currentPage: 'about',
         phone: '0705155727',
         phoneIntl: '+254705155727'
@@ -65,8 +65,8 @@ app.get('/about', (req, res) => {
 
 app.get('/blog', (req, res) => {
     res.render('blog', {
-        title: 'Curtain Tips, Ideas & Expert Advice - Mohaa Finest Curtains',
-        description: 'Learn how to choose the right curtains, fabrics, and styles for your home or business — straight from Eastleigh\'s curtain experts.',
+        title: 'Curtain Tips & Ideas for Nairobi Homes | Mohaa Finest Curtains Blog',
+        description: 'Expert curtain tips, styling ideas and care guides for Nairobi homes and offices — from Mohaa Finest Curtains, Eastleighs trusted curtain specialists.',
         currentPage: 'blog',
         phone: '0705155727',
         phoneIntl: '+254705155727'
@@ -85,8 +85,8 @@ app.get('/contact', (req, res) => {
 
 app.get('/collections', (req, res) => {
     res.render('collections', {
-        title: 'Collections - Mohaa Finest Curtains',
-        description: 'Explore our premium curtain collections. Wide range of styles, fabrics, and prices to suit every need.',
+        title: 'Curtain Collections | Blackout, Sheer, Velvet & Custom Curtains — Nairobi',
+        description: 'Browse Mohaa\'s curtain collections — blackout, sheer, velvet, thermal & custom designs. Available in Eastleigh Nairobi with free measurement and installation across Kenya.',
         currentPage: 'collections',
         phone: '0705155727',
         phoneIntl: '+254705155727'

@@ -6,6 +6,8 @@
     <title><%= title %></title>
     <meta name="description" content="View our curtain installation gallery in Nairobi. See beautiful curtain transformations for homes, offices & commercial spaces. Expert work by Mohaa Finest Curtains.">
     <meta name="keywords" content="curtain gallery, curtain portfolio, curtain installations, curtain work, curtain designs, curtain before after, curtain transformations, luxury curtain installations, professional curtain work, curtain showcase, curtain examples, best curtain gallery nairobi, curtain gallery eastleigh">
+    <meta name="description" content="<%= description %>">
+    <meta name="keywords" content="curtain portfolio eastleigh, curtain installation photos nairobi, curtain designs nairobi, curtain before after kenya, curtains in nairobi">
     <meta name="author" content="Mohaa Finest Curtains">
     <meta name="robots" content="index, follow">
     <meta name="language" content="English">
@@ -19,9 +21,7 @@
     <meta property="og:url" content="https://www.mohaafinestcurtains.co.ke/gallery">
     <meta property="og:title" content="<%= title %>">
     <meta property="og:description" content="<%= description %>">
-    <meta property="og:image" content="/images/logo.jpeg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
+    <meta property="og:image" content="/images/IMG_6794.JPG.jpeg">
     <meta property="og:site_name" content="Mohaa Finest Curtains">
     <meta property="og:locale" content="en_KE">
 
@@ -30,10 +30,40 @@
     <meta property="twitter:url" content="https://www.mohaafinestcurtains.co.ke/gallery">
     <meta property="twitter:title" content="<%= title %>">
     <meta property="twitter:description" content="<%= description %>">
-    <meta property="twitter:image" content="/images/logo.jpeg">
+    <meta property="twitter:image" content="/images/IMG_6794.JPG.jpeg">
+
+    <!---Add canonical tag-->
+    <link rel="canonical" href="https://www.mohaafinestcurtains.co.ke/collections">
+
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="icon" href="/images/logo.jpeg" type="image/jpeg">
     <link rel="canonical" href="https://www.mohaafinestcurtains.co.ke/gallery">
+
+    <!---Add json_ld schema-->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "ItemList"],
+  "name": "Mohaa Finest Curtains",
+  "url": "https://www.mohaafinestcurtains.co.ke/gallery",
+  "telephone": "<%= phoneIntl %>",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Moyale Mall, Shop S26, 1st Avenue, 4th Street",
+    "addressLocality": "Eastleigh",
+    "addressRegion": "Nairobi",
+    "addressCountry": "KE"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "08:00", "closes": "20:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Sunday"], "opens": "10:00", "closes": "18:00" }
+  ],
+  "sameAs": [
+    "https://www.facebook.com/share/1AYCXkkWvB/",
+    "https://www.instagram.com/mohaa_finest_curtains"
+  ]
+}
+</script>
 </head>
 <body>
     <!-- Navigation -->
@@ -244,11 +274,19 @@
 </section>
 
 <style>
+.page-hero{
+    padding: 20px 30px;
+}
+.page-hero .container{
+    padding: 10px;
+    border-bottom: 0.07px solid var(--primary-teal);
+}
 .gallery-nav {
     display: flex;
     justify-content: center;
     gap: 10px;
     margin-bottom: 40px;
+    padding: 10px 20px;
     flex-wrap: wrap;
 }
 
@@ -349,6 +387,9 @@
 
 .process-step {
     text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.041);
 }
 
 .process-step img {

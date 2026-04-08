@@ -28,6 +28,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+
 }
 
 img {
@@ -807,6 +808,11 @@ ul {
     color: var(--light-grey);
 }
 
+/*===========SECTION_DIVIDER==========*/
+.section-divider{
+    border-top: 0.09px solid #99959505;
+}
+/*===========SECTION_DIVIDER==========*/
 /* WhatsApp Popup */
 .whatsapp-popup {
     display: none;
