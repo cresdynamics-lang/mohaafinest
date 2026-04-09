@@ -62,25 +62,32 @@ ul {
 .btn-primary {
     background-color: var(--accent-gold);
     color: var(--white);
+    border-color: #0F6F6D;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15); /* Subtle black shadow */
     border-color: var(--accent-gold);
 }
 
 .btn-primary:hover {
     background-color: #d1941f;
     border-color: #d1941f;
-    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);/*added box shadow on hover to enhance premium feel*/
+    transform: translateY(-1px); /*changed it from -2px to -1px to enhance subtity of the hover effect*/
+    transition: transform 0.2s ease; /*added the transition state here to make the hover effect fast*/
 }
 
 .btn-secondary {
     background-color: transparent;
-    color: var(--primary-teal);
+    color: var(--text-dark); /*changed the color from teal to black to make it more readable in sections where we have teal backgrounds overiding the text color*/
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);/*added a blak box shadow to ensure some of the btns are visible(the ones hidden due to bg colors)*/
     border-color: var(--primary-teal);
 }
 
 .btn-secondary:hover {
     background-color: var(--primary-teal);
     color: var(--white);
-    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);/*added box shadow on hover to enhance premium feel*/
+    transform: translateY(-1px); /*changed it from -2px to -1px to enhance subtity of the hover effect*/
+    transition: transform 0.2s ease; /*added the transition state here to make the hover effect fast*/
 }
 
 /* Navigation */
@@ -763,6 +770,7 @@ ul {
 .cta-buttons {
     display: flex;
     gap: 20px;
+    margin-top: 5px; /*added a spacing of 5px to avoid crowding the blog foter section*/
     justify-content: center;
     flex-wrap: wrap;
 }
@@ -1642,6 +1650,11 @@ ul {
     transform: translateY(-5px);
 }
 
+/* Show the category-tag on hover */
+.featured-card:hover .category-tag {
+    opacity: 1;
+}
+
 .featured-image {
     position: relative;
     height: 200px;
@@ -1664,6 +1677,8 @@ ul {
     border-radius: 15px;
     font-size: 12px;
     font-weight: 600;
+    opacity: 0;/*Hide the tag*/
+    transition: opacity 0.3s ease; /*add animation for the tag for smooth transition*/
     text-transform: uppercase;
 }
 

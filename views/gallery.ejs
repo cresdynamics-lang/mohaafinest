@@ -390,6 +390,13 @@
     padding: 5px;
     border-radius: 5px;
     box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.041);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.process-step:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    background: var(--light-grey);
 }
 
 .process-step img {
@@ -517,5 +524,7 @@ document.addEventListener('DOMContentLoaded', function() {
     </a>
 
     <script src="/js/script.js"></script>
+    <script src="/js/gallery.js"></script>
+    
 </body>
 </html>

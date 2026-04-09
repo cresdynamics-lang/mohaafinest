@@ -135,3 +135,56 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+// Animated counters for about page stats
+// This function creates smooth counting animation from 0 to target value
+function animateCounter(element, target, format = 'number', duration = 2000) {
+    const start = 0;    // Start counting from 0
+    const increment = target / (duration / 16);    // Calculate increment for 60fps animation
+    let current = start;  // Current counter value
+    
+    // Create timer that runs every 16ms (60fps)
+    const timer = setInterval(() => {
+        current += increment;     // Add increment to current value
+        if (current >= target) {       // Stop when reaching target
+            current = target;           // Set to exact target
+            clearInterval(timer);       // Stop timer
+        }
+        
+        // Apply format based on parameter
+        switch(format) {   // Use format parameter instead of checking content
+            case 'plus':    // For "500+", "3+" etc.
+                element.textContent = Math.floor(current) + '+';      // Add + symbol after counting
+                break;
+            case 'slash':     // For "24/7"
+                element.textContent = Math.floor(current) + '/7';    // Add /7 after counting
+                break;
+            default:                                            // For regular numbers
+                element.textContent = Math.floor(current);           // Just show the number
+                break;
+        }
+    }, 16);                                              // Run every 16ms for smooth animation
+}
+
+// Initialize counters when page loads
+// This function checks if we're on about page and starts animations
+document.addEventListener('DOMContentLoaded', function() {
+    // Check if current page is about page (multiple URL formats)
+    if (window.location.pathname === '/about' || window.location.pathname.includes('about')) {
+        
+        // Define target values AND formats for each stat counter
+        // The order must match the HTML order in about.ejs
+        const stats = [
+            { selector: '.stat-number', targets: [500, 3, 1000, 24], formats: ['plus', 'plus', 'plus', 'slash'] }
+        ];
+        
+        // Find all stat number elements
+        const statElements = document.querySelectorAll('.stat-number');
+        
+        // Start animation for each stat with staggered timing
+        statElements.forEach((element, index) => {
+            setTimeout(() => {
+                animateCounter(element, stats[0].targets[index], stats[0].formats[index]);    // Pass both target and format
+            }, index * 200);                                   // Start each 200ms apart (staggered effect)
+        });
+    }
+});
