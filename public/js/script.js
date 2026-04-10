@@ -134,7 +134,109 @@ document.addEventListener('DOMContentLoaded', function() {
             imageObserver.observe(img);
         });
     }
+
+    // Collections Page Pagination
+    const productsGrid = document.querySelector('.products-grid');
+    const productCards = document.querySelectorAll('.product-card');
+    
+    if (productsGrid && productCards.length > 0) {
+        let currentVisible = 10; // Show 10 cards initially (2 rows of 5)
+        const cardsPerLoad = 5; // Load 5 more cards each time (1 full row)
+        
+        // Hide all cards initially except the first 10
+        productCards.forEach((card, index) => {
+            if (index >= currentVisible) {
+                card.style.display = 'none';
+            }
+        });
+        
+        // Create Load More button
+        const loadMoreBtn = document.createElement('button');
+        loadMoreBtn.textContent = 'Load More';
+        loadMoreBtn.className = 'load-more-btn';
+        loadMoreBtn.style.cssText = `
+            display: inline-block;
+            margin: 0 0 30px 30px;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+            vertical-align: top;
+        `;
+        
+        // Add hover effects
+        loadMoreBtn.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-2px)';
+            this.style.boxShadow = '0 6px 20px rgba(102, 126, 234, 0.4)';
+        });
+        
+        loadMoreBtn.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+            this.style.boxShadow = '0 4px 15px rgba(102, 126, 234, 0.3)';
+        });
+        
+        // Create a container for the button positioned to the right of the grid
+        const buttonContainer = document.createElement('div');
+        buttonContainer.style.cssText = `
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 20px;
+            padding-right: 0;
+        `;
+        
+        // Add button to the container
+        buttonContainer.appendChild(loadMoreBtn);
+        
+        // Insert the button container after the collections header but before the products grid
+        const collectionsHeader = document.querySelector('.collections-header');
+        if (collectionsHeader) {
+            collectionsHeader.parentNode.insertBefore(buttonContainer, productsGrid);
+        } else {
+            // Fallback: insert before products grid
+            productsGrid.parentNode.insertBefore(buttonContainer, productsGrid);
+        }
+        
+        // Load More functionality
+        loadMoreBtn.addEventListener('click', function() {
+            const nextVisible = Math.min(currentVisible + cardsPerLoad, productCards.length);
+            
+            // Show next 4 cards with fade-in animation
+            for (let i = currentVisible; i < nextVisible; i++) {
+                const card = productCards[i];
+                card.style.display = 'block';
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                
+                // Animate cards in
+                setTimeout(() => {
+                    card.style.transition = 'all 0.5s ease';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, (i - currentVisible) * 100);
+            }
+            
+            currentVisible = nextVisible;
+            
+            // Hide button if all cards are visible
+            if (currentVisible >= productCards.length) {
+                loadMoreBtn.style.display = 'none';
+            }
+        });
+        
+        // Hide button initially if all cards are already visible
+        if (currentVisible >= productCards.length) {
+            loadMoreBtn.style.display = 'none';
+        }
+    }
 });
+
+
 // Animated counters for about page stats
 // This function creates smooth counting animation from 0 to target value
 function animateCounter(element, target, format = 'number', duration = 2000) {
