@@ -4,6 +4,10 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Set EJS as template engine
+const expressLayouts = require('express-ejs-layouts');
+
+app.use(expressLayouts);
+app.set('layout', 'layout'); // Defaults to views/layout.ejs
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 

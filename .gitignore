@@ -93,3 +93,6 @@ Thumbs.db
 *.tmp
 *.temp
 *SEO_IMPLEMENTATION_REPORT.md
+
+# AI Agent skills (local only — not for version control)
+.agent/
