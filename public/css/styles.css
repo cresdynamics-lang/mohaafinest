@@ -2788,3 +2788,178 @@ ul {
     flex-direction: column;
     justify-content: space-between;
 }
+
+@media (max-width: 768px) {
+    .product-collections .bento-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .product-collections .bento-grid .glass-card {
+        min-height: 260px !important;
+        padding: 12px !important;
+    }
+
+    .product-collections .bento-grid .glass-card > div {
+        padding: 12px !important;
+        border-radius: 10px !important;
+    }
+
+    .product-collections .bento-grid h3 {
+        font-size: 14px !important;
+        line-height: 1.25;
+    }
+
+    .product-collections .bento-grid p {
+        display: none;
+    }
+
+    .product-collections .bento-grid .btn {
+        width: 100%;
+        padding: 9px 8px !important;
+        font-size: 12px;
+        margin-bottom: 0;
+    }
+
+    .home-final-cta-buttons {
+        flex-wrap: nowrap !important;
+        gap: 12px !important;
+    }
+
+    .home-final-cta-buttons .btn {
+        width: auto;
+        flex: 1 1 0;
+        min-width: 0;
+        max-width: 170px;
+        padding: 12px 10px;
+        font-size: 13px;
+        margin-bottom: 0;
+        white-space: nowrap;
+    }
+}
+
+.asym-hero-image {
+    position: relative;
+    padding: 12px;
+    border: 1px solid rgba(34, 90, 89, 0.22);
+    border-radius: 24px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.96), rgba(245,239,228,0.86));
+    box-shadow: 0 18px 45px rgba(10, 32, 32, 0.12);
+}
+
+.asym-hero-image img {
+    display: block;
+    border-radius: 16px;
+    box-shadow: 0 16px 32px rgba(0,0,0,0.12);
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 87.5%;
+    }
+
+    body {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    h1,
+    .hero-title,
+    .page-hero h1,
+    .blog-hero h1 {
+        font-size: 1.75rem !important;
+        line-height: 1.15 !important;
+    }
+
+    h2,
+    .collections-header h2,
+    .final-cta h2,
+    .section-title {
+        font-size: 1.45rem !important;
+        line-height: 1.2 !important;
+    }
+
+    h3,
+    .product-content h3,
+    .service-text h3 {
+        font-size: 1rem !important;
+        line-height: 1.25 !important;
+    }
+
+    p,
+    li,
+    .hero-subtitle,
+    .collections-header p,
+    .product-content p,
+    .final-cta p,
+    .blog-hero p,
+    .service-text p {
+        font-size: 0.9rem !important;
+    }
+
+    .btn,
+    button,
+    input,
+    textarea,
+    select {
+        font-size: 0.85rem !important;
+    }
+
+    .trust-item {
+        font-size: 0.85rem !important;
+    }
+
+    .asym-hero {
+        padding: 36px 15px;
+        gap: 22px;
+    }
+
+    .asym-hero-image {
+        padding: 8px;
+        border-radius: 18px;
+    }
+
+    .asym-hero-image img {
+        height: 360px !important;
+        border-radius: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 81.25%;
+    }
+
+    body {
+        font-size: 12px;
+    }
+
+    h1,
+    .hero-title,
+    .page-hero h1,
+    .blog-hero h1 {
+        font-size: 1.55rem !important;
+    }
+
+    h2,
+    .collections-header h2,
+    .final-cta h2,
+    .section-title {
+        font-size: 1.3rem !important;
+    }
+
+    p,
+    li,
+    .hero-subtitle,
+    .collections-header p,
+    .product-content p,
+    .final-cta p,
+    .blog-hero p,
+    .service-text p {
+        font-size: 0.84rem !important;
+    }
+
+    .asym-hero-image img {
+        height: 300px !important;
+    }
+}

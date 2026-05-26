@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 
 // Set EJS as template engine
 const expressLayouts = require('express-ejs-layouts');
@@ -49,7 +49,7 @@ app.get('/gallery', (req, res) => {
 
 app.get('/how-it-works', (req, res) => {
     res.render('how-it-works', {
-        title: 'How It Works | Our 4-Step Curtain Process — Measure, Design, Install in Nairobi,',
+        title: 'How We Work | Our 4-Step Curtain Process — Measure, Design, Install in Nairobi,',
         description: 'See how Mohaa Finest Curtains works — contact us, get a free home measurement, choose your design, and we handle professional installation. Simple, transparent, and hassle-free across Kenya.',
         currentPage: 'how-it-works',
         phone: '0705155727',
