@@ -199,6 +199,24 @@
     position: relative;
 }
 
+.page-hero-modern .btn-secondary,
+.cta-section-modern .btn-secondary,
+.blog-cta-strip .btn-secondary {
+    color: white;
+    border-color: white;
+    background-color: transparent;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+.page-hero-modern .btn-secondary:hover,
+.cta-section-modern .btn-secondary:hover,
+.blog-cta-strip .btn-secondary:hover {
+    color: var(--dark-contrast);
+    background-color: white;
+    border-color: white;
+    box-shadow: 0 8px 20px rgba(255,255,255,0.22);
+}
+
 /* =========================================
    SHARED SECTION UTILITIES
    ========================================= */
