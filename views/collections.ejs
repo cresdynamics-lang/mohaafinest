@@ -1,8 +1,8 @@
 <!-- Collections Hero -->
         <section class="collections-hero">
             <div class="container">
-                <h1>Premium Curtain Collections</h1>
-                <p>Discover our extensive selection of 44 premium curtains for every style and budget</p>
+                <h1>Premium Curtains in Kenya: Blackout, Sheer, Velvet and Custom Designs</h1>
+                <p>Discover premium curtains for every Nairobi home, office, hotel and apartment, with free measurement and expert installation from Eastleigh.</p>
             </div>
         </section>
 
@@ -10,8 +10,20 @@
         <section class="product-collections">
             <div class="container">
                 <div class="collections-header">
-                    <h2>Our Complete Collections</h2>
-                    <p>From elegant sheer curtains to luxurious thermal drapes, find the perfect window treatment for your space</p>
+                    <h2>Shop Curtain Collections in Nairobi and Across Kenya</h2>
+                    <p>From elegant sheer curtains to luxury blackout, velvet, thermal and motorized curtains, find the perfect window treatment for your space.</p>
+                </div>
+
+                <div class="seo-copy" style="max-width: 960px; margin: 0 auto 40px; color: var(--text-grey); font-size: 1.02rem; line-height: 1.8;">
+                    <p>Mohaa Finest Curtains supplies custom curtains in Nairobi and across Kenya for bedrooms, sitting rooms, offices, hotels, restaurants and apartments. Our Eastleigh showroom carries practical day-to-day fabrics and premium decorative options, including sheer curtains for soft daylight, blackout curtains for privacy and sleep, velvet curtains for luxury interiors, thermal curtains for heat control, motorized curtains for smart homes, and rods, rails, hooks and accessories for a complete installation.</p>
+                    <p>Every curtain order can be measured and fitted by our team. We help you choose the right fabric weight, curtain fullness, heading style and colour for your space, then prepare the curtains to your exact window size. Customers in Eastleigh, Westlands, Kilimani, Lavington, Kileleshwa, Parklands, South B, South C, Kasarani, Ruaka, Syokimau, Karen and Ngong Road can request free measurement, while customers outside Nairobi can WhatsApp for delivery and installation options.</p>
+                    <p>Use this collection page as your starting point. Choose the product category that matches your room, send us a WhatsApp message for current prices in KES, or visit Moyale Mall in Eastleigh to see fabric samples before ordering.</p>
+                </div>
+
+                <div class="collection-link-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin-bottom:38px;">
+                    <% products.forEach(function(product) { %>
+                    <a href="/<%= product.slug %>" class="btn btn-secondary" style="text-align:center;"><%= product.name %></a>
+                    <% }); %>
                 </div>
 
                 <div class="bento-grid">
@@ -632,6 +644,23 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Collection FAQ -->
+                <section class="section-pad section-alt" style="margin-top:50px;">
+                    <div class="section-header">
+                        <span class="section-tag">Curtain Buying Questions</span>
+                        <h2>Frequently Asked Questions About Curtains in Kenya</h2>
+                        <p>Quick answers for customers comparing curtain prices, fabric types and installation options in Nairobi.</p>
+                    </div>
+                    <div class="faq-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;">
+                        <% faqs.forEach(function(item) { %>
+                        <article class="glass-card" style="padding:24px;">
+                            <h3 style="color:var(--dark-teal);font-size:1.2rem;margin-bottom:10px;"><%= item.question %></h3>
+                            <p style="color:var(--text-grey);line-height:1.7;"><%= item.answer %></p>
+                        </article>
+                        <% }); %>
+                    </div>
+                </section>
 
                 <!-- Collections CTA -->
                 <div class="collections-cta">

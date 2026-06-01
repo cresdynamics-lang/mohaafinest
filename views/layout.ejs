@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= title %></title>
     <meta name="description" content="<%= description %>">
+    <% if (keywords && keywords.length) { %>
+    <meta name="keywords" content="<%= keywords.join(', ') %>">
+    <% } %>
     <meta name="author" content="Mohaa Finest Curtains">
     <meta name="robots" content="index, follow">
     <meta name="language" content="English">
@@ -12,11 +15,18 @@
     <meta name="geo.placename" content="Eastleigh, Nairobi">
     <meta name="geo.position" content="-1.2767;36.8219">
     <meta name="ICBM" content="-1.2767, 36.8219">
+    <link rel="canonical" href="<%= canonical %>">
     <meta property="og:title" content="<%= title %>">
     <meta property="og:description" content="<%= description %>">
-    <meta property="og:image" content="/images/logo.jpeg">
+    <meta property="og:image" content="<%= ogImage %>">
+    <meta property="og:url" content="<%= canonical %>">
+    <meta property="og:type" content="website">
     <meta property="og:site_name" content="Mohaa Finest Curtains">
     <meta property="og:locale" content="en_KE">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="<%= title %>">
+    <meta name="twitter:description" content="<%= description %>">
+    <meta name="twitter:image" content="<%= ogImage %>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/pages.css">
@@ -34,6 +44,11 @@
     <meta property="business:contact_data:locality" content="Nairobi">
     <meta property="business:contact_data:country_name" content="Kenya">
     <meta property="business:contact_data:phone_number" content="<%= phoneIntl %>">
+    <% if (schemas && schemas.length) { %>
+    <% schemas.forEach(function(schema) { %>
+    <script type="application/ld+json"><%- JSON.stringify(schema) %></script>
+    <% }); %>
+    <% } %>
 </head>
 <body>
     <!-- Navigation -->
