@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Show popup after 5 seconds
     setTimeout(function() {
-        if (!popupShown && !sessionStorage.getItem('whatsappPopupShown')) {
+        if (whatsappPopup && !popupShown && !sessionStorage.getItem('whatsappPopupShown')) {
             whatsappPopup.style.display = 'block';
             popupShown = true;
             sessionStorage.setItem('whatsappPopupShown', 'true');
